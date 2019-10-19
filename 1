@@ -1,5 +1,9 @@
-
-
+kafka start:
+ 1.0 bin/kafka-server-start.sh config/server.properties  --> generally result in thread block
+     bin/kafka-server-start.sh -daemon config/server.properties --> not thread block
 linux：
+ 1 jps查看当前进程
+    是JDK 1.5提供的一个显示当前所有java进程pid的命令，简单实用，非常适合在linux/unix平台上简单察看当前java进程的一些简单情况。
+ 2 chmod 777 xx.sh 授予xx.sh命令权限
  1.0 创建topic bin/kafka-topics.sh --create --topic topicname --replication-factor 1 --partitions 1 --zookeeper localhost:2181
  2.0 查看topic bin/kafka-topics.sh --list --zookeeper localhost:2181
